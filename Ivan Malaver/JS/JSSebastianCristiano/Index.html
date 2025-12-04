@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript CRUD</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b5a5b5463f.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container py-4">
+        <h1 class="text-center mb-4">JavaScript CRUD</h1>
+
+        <form id="form-gift" class="mb-4">
+            <div class="row g-2">
+
+                <div class="col">
+                    <input id="gift" class="form-control" placeholder="Gift name" required>
+                </div>
+
+                <div class="col">
+                    <input id="type" class="form-control" placeholder="Type" required>
+                </div>
+
+                <div class="col">
+                    <input id="time" class="form-control" placeholder="Time" required>
+                </div>
+
+                <div class="col">
+                    <input id="price" type="number" class="form-control" placeholder="Price" required>
+                </div>
+
+                <div class="col">
+                    <input id="image" class="form-control" placeholder="Image (URL)" required>
+                </div>
+
+                <div class="col">
+                    <button class="btn btn-primary w-100" type="submit">Add</button>
+                </div>
+
+                <div class="col">
+                    <button class="btn btn-danger w-100" type="button" id="btn-clear">Clear</button>
+                </div>
+
+            </div>
+        </form>
+
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>Gift</th>
+                    <th>Type</th>
+                    <th>Time</th>
+                    <th>Price</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+        </table>
+    </div>
+
+    <div class="modal fade" id="modal-gift">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+
+                <form id="form-modal">
+                    <h5 class="mb-3">Edit Gift</h5>
+
+                    <input id="gift-modal" class="form-control mb-2" placeholder="Gift name" required>
+                    <input id="type-modal" class="form-control mb-2" placeholder="Type" required>
+                    <input id="time-modal" class="form-control mb-2" placeholder="Time" required>
+                    <input id="price-modal" type="number" class="form-control mb-2" placeholder="Price" required>
+                    <input id="image-modal" class="form-control mb-3" placeholder="Image URL" required>
+
+                    <button class="btn btn-warning w-100" type="submit">Update</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/app.js" type="module"></script>
+</body>
+
+</html>
